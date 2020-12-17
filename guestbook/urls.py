@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('message/', include('web.urls')),
     path('',ReddirectView.as_view(url='message/')),
-
+    path('acconts/',include('django.contrib.auth.urls')),
 ]
