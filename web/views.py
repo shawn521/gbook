@@ -1,9 +1,10 @@
-form django.shortcuts import render
-form django.view.generic import ListVeiw, DetailView, CreateView
-form django.urls import reverse_lazy
-form .models import Message
+from django.shortcuts import render
+from django.views.generic import ListView, DetailView, CreateView
+from django.urls import reverse_lazy
+from .models import Message
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-class MwssageList(ListView):
+class MessageList(ListView):
     model=Message
 
 class MessageDetail(DetailView):
